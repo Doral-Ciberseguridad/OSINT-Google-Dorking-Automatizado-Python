@@ -15,7 +15,7 @@ python main.py
 
 
 
-5. Introduce los parámetros solicitados y visualiza los resultados automáticos en el navegador:
+4. Introduce los parámetros solicitados y visualiza los resultados automáticos en el navegador:
  
 <img width="1231" height="1047" alt="image" src="https://github.com/user-attachments/assets/61453c90-ad99-4056-9d55-cf7450e1e606" />
 
