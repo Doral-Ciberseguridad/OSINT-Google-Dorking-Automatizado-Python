@@ -1,5 +1,5 @@
 #Script para google dorking
-#Autor: ALejandro Doral
+
 
 
 #Librerias
@@ -12,7 +12,7 @@ from colorama import Fore  # para dar color a la consola
 time.sleep(2)
 print("\n")
 print("\n")
-print(Fore.BLUE + "Bienvenido al programa de Google Dorking automatizado de Alejandro Doral")
+print(Fore.BLUE + "Bienvenido al programa de Google Dorking automatizado")
 
 
 # Variable para controlar si el programa sigue ejecutándose
@@ -301,4 +301,3 @@ while seguir:
 time.sleep(2)
 print("\n")
 print("Gracias por usar este programa!")
-print("Autor: Alejandro Doral")
