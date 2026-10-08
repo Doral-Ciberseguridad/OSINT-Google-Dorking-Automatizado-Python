@@ -1,26 +1,33 @@
-#Script para google dorking
+# Script para google dorking
 
 
 
 #Librerias
+# Importo el módulo webbrowser para abrir páginas de búsqueda automáticamente en el navegador web
 import webbrowser  # para las búsquedas con Google
+# Importo time para gestionar los tiempos de espera y pausas en la ejecución de la consola
 import time  # para tiempo de espera en la ejecución de consola
+# Importo Fore de colorama para dar color y estilo visual a los mensajes en la consola
 from colorama import Fore  # para dar color a la consola
 
 
 # Bienvenida
+# Hago una pausa de dos segundos antes de mostrar el mensaje de bienvenida
 time.sleep(2)
 print("\n")
 print("\n")
+# Imprimo el mensaje de bienvenida en color azul en la consola
 print(Fore.BLUE + "Bienvenido al programa de Google Dorking automatizado")
 
 
 # Variable para controlar si el programa sigue ejecutándose
+# Inicializo la variable centinela en True para mantener activo el bucle principal de ejecución
 seguir = True
 
 
 while seguir:
     # Mostrar opciones
+    # Pauso la ejecución temporalmente para dar fluidez visual al menú
     time.sleep(2)
     print("\n")
     print("Estas son las opciones para hacer Google Dorking con el navegador:")
@@ -40,6 +47,7 @@ while seguir:
     time.sleep(2)
     print("\n")
     print("¿Quieres obtener información de alguna opción? (SI/NO)")
+    # Capturo la respuesta del usuario para saber si requiere explicaciones adicionales
     respuesta_info = input("--->")
 
 
@@ -61,6 +69,7 @@ while seguir:
 
 
         #Guardar la opcion del usuario en una variable
+        # Almaceno el identificador de la opción sobre la cual el usuario pide detalles
         eleccion_info = input("--->")
 
 
@@ -75,7 +84,7 @@ while seguir:
             print("Muy bien pues elige abajo si quieres la opcion 1")
 
 
-         #Para intitle
+       #Para intitle
         elif eleccion_info == "2":
             time.sleep(2)
             print("\n")
@@ -169,6 +178,7 @@ while seguir:
     time.sleep(2)
     print("\n")
     print("Elige")
+    # Leo la opción operativa que ejecuto en el navegador
     eleccion_usuario = input("--->")
 
 
@@ -178,11 +188,13 @@ while seguir:
         print("\n")
         print("Dime una url para buscar")
         url = input("--->")
+        # Construyo el operador de búsqueda inurl para filtrar por dirección
         buscar_1 = f"inurl:{url}"
         time.sleep(2)
         print("\n")
         print("Muy bien en breve se verán las búsquedas...")
         time.sleep(4)
+        # Lanzo la consulta generada directamente en Google usando mi navegador predeterminado
         webbrowser.open(f"https://www.google.com/search?q={buscar_1}")
 
 
@@ -191,11 +203,13 @@ while seguir:
         time.sleep(2)
         print("\n")
         titulo = input("Dime un título para buscar --->")
+        # Formateo la consulta con intitle para buscar en los títulos de las páginas
         buscar_2 = f"intitle:{titulo}"
         time.sleep(2)
         print("\n")
         print("Muy bien en breve se verán las búsquedas...")
         time.sleep(4)
+        # Abro el navegador con el dork de título configurado
         webbrowser.open(f"https://www.google.com/search?q={buscar_2}")
 
 
@@ -204,11 +218,13 @@ while seguir:
         time.sleep(2)
         print("\n")
         pdf = input("Dime un pdf para buscar --->")
+        # Armo el dork para buscar archivos PDF de un tema concreto
         buscar_3 = f"filetype:pdf {pdf}"
         time.sleep(2)
         print("\n")
         print("Muy bien en breve se verán las búsquedas...")
         time.sleep(4)
+        # Abro el navegador para buscar el documento PDF en la red
         webbrowser.open(f"https://www.google.com/search?q={buscar_3}")
 
 
@@ -217,11 +233,13 @@ while seguir:
         time.sleep(2)
         print("\n")
         jpg = input("Dime un jpg para buscar --->")
+        # Configuro el dork para localizar ficheros de imagen formato JPG
         buscar_4 = f"filetype:jpg {jpg}"
         time.sleep(2)
         print("\n")
         print("Muy bien en breve se verán las búsquedas...")
         time.sleep(4)
+        # Ejecuto la búsqueda de imágenes en el navegador
         webbrowser.open(f"https://www.google.com/search?q={buscar_4}")
 
 
@@ -230,11 +248,13 @@ while seguir:
         time.sleep(2)
         print("\n")
         url_completa = input("Dime una url completa para buscar --->")
+        # Preparo la consulta usando allinurl para cadenas extensas en la ruta
         buscar_5 = f"allinurl:{url_completa}"
         time.sleep(2)
         print("\n")
         print("Muy bien en breve se verán las búsquedas...")
         time.sleep(4)
+        # Muestro los resultados del dork allinurl en el navegador
         webbrowser.open(f"https://www.google.com/search?q={buscar_5}")
 
 
@@ -243,11 +263,13 @@ while seguir:
         time.sleep(2)
         print("\n")
         contenido_pagina = input("Dime contenido de una página para buscar --->")
+        # Utilizo intext para buscar cadenas de texto dentro del cuerpo del sitio
         buscar_6 = f"intext:{contenido_pagina}"
         time.sleep(2)
         print("\n")
         print("Muy bien en breve se verán las búsquedas...")
         time.sleep(4)
+        # Abro el navegador con la consulta de texto interno
         webbrowser.open(f"https://www.google.com/search?q={buscar_6}")
 
 
@@ -256,11 +278,13 @@ while seguir:
         time.sleep(2)
         print("\n")
         sitio_especifico = input("Dime un sitio específico para buscar --->")
+        # Estructuro la orden site para restringir los resultados a un dominio en concreto
         buscar_7 = f"site:{sitio_especifico}"
         time.sleep(2)
         print("\n")
         print("Muy bien en breve se verán las búsquedas...")
         time.sleep(4)
+        # Ejecuto la consulta orientada a un sitio web en el navegador
         webbrowser.open(f"https://www.google.com/search?q={buscar_7}")
 
 
@@ -269,11 +293,13 @@ while seguir:
         time.sleep(2)
         print("\n")
         cache = input("Dime cache para buscar --->")
+        # Formo el dork de caché para consultar copias guardadas de páginas
         buscar_8 = f"cache:{cache}"
         time.sleep(2)
         print("\n")
         print("Muy bien en breve se verán las búsquedas...")
         time.sleep(4)
+        # Muestro la versión en caché de la página web solicitada
         webbrowser.open(f"https://www.google.com/search?q={buscar_8}")
 
 
@@ -293,6 +319,7 @@ while seguir:
     print("¿Quieres seguir? (SI/NO)")
     eleccion_usuario2 = input("--->")
 
+    # Compruebo si decido salir del bucle en función de la respuesta obtenida
     if eleccion_usuario2.lower() not in ["si", "s"]:
         seguir = False
 
